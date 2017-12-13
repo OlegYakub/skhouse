@@ -1,0 +1,217 @@
+
+.order{
+	&__title{
+		color: #404040;
+		text-transform: uppercase;
+		padding-bottom: 20px;
+	}
+
+	&__fields{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+
+	}
+
+	&__text{
+		letter-spacing: 1px;
+		padding: 25px 0;
+	}
+
+	&__col{
+		width: 370px;
+	}
+
+	&__content{
+		&#another{
+			//display: none;
+		}
+	}
+
+	&__input{
+		position: relative;
+		margin-bottom: 20px;
+		select{
+			width: 100%;
+		}
+
+
+
+		label.error{
+			position: absolute;
+			left: 0;
+			bottom: -17px;
+			font-size: 12px;
+		}
+
+		.jq-selectbox{
+			width: 100%;
+
+			&.focused{
+				.jq-selectbox__select{
+					border: 1px solid #e8e8e8;
+				}
+			}
+
+			&.opened{
+				.jq-selectbox__select{
+					border-color: #a0a0a0;
+					border-bottom-color: transparent;
+				}
+
+				.jq-selectbox__dropdown{
+					border-color: #a0a0a0;
+				}
+
+				.jq-selectbox__trigger-arrow{
+					transform: rotate(180deg);
+				}
+			}
+
+			& .placeholder{
+				color: #353535;
+			}
+
+			li{
+				padding: 9px 10px;
+				&:hover{
+					background-color: #e8e8e8;
+					color: #353535;
+				}
+			}
+
+			&__select{
+				background: transparent;
+				border-radius: 0px;
+				box-shadow: none;
+				height: 42px;
+				border: 1px solid #e8e8e8;
+			}
+
+			&__select-text{
+				line-height: 42px;
+			}
+
+			&__trigger{
+				border-left: none;
+			}
+
+			&__trigger-arrow{
+				border: none;
+				width: 10px;
+				height: 10px;
+				top: calc(50%  - 5px);
+				left: calc(50%  - 5px);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-image: url("../img/small-top-arr.png")
+			}
+
+			&__dropdown{
+				border-top: none;
+				border-radius: 0px;
+				box-shadow: none;
+				top: 41px !important;
+			}
+		}
+
+		.input{
+			padding: 0 15px;
+			height: 44px;
+
+			line-height: 44px; 
+		}
+	}
+
+	&__check{
+		padding-top: 15px;
+	}
+
+	&__submit{
+		max-width: 270px;
+	}
+}
+
+.o-checkout{
+	&__title{
+		text-transform: uppercase;
+		color: #959595;
+	}
+
+	&__price{
+		font-size: 30px;
+		color: $pink;
+	}
+
+	&__deliv{
+		font-size: 20px;
+		padding-bottom: 15px;
+		color: #7f7f7f;
+	}
+}
+
+.o-thanks{
+	min-height: 50vh; 
+	&__link{
+		color: $pink;
+	}
+
+	&__text{
+		margin-bottom: 20px;
+	}
+
+	&__back{
+		color: $pink;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		position: relative;
+		padding-left: 10px;
+		&:before{
+			content: url(../img/pink-arr.png);
+			transform: rotate(180deg);
+			position: absolute;
+			left: 0px;
+		}
+	}
+}
+/* ============================================================== */
+/* ==============================RESPONSIVE============= */
+/* ==================================960========================== */
+@media screen and (max-width: 1170px){
+	.order{
+		&__col{
+			width: 300px;
+		}
+	}
+}
+
+/* ==================================744========================== */
+@media screen and (max-width: 959px){
+	.order{
+		&__col{
+			width: 228px;
+		}
+	}
+}
+
+/* ==================================320========================== */
+@media screen and (max-width: 743px){
+	.order{
+		&__col{
+			width: 100%;
+		}
+
+		&__fields{
+			display: block;
+
+		}
+
+		&__tabs-nav{
+			.tabs-nav__item{
+				width: 140px;
+			}
+		}
+	}
+}

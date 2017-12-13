@@ -1,0 +1,186 @@
+footer{
+	background-color: #f1f1f1;
+}
+
+.footer{
+	border-bottom: $bd1;
+	&__body{
+		padding-top: 30px;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		padding-bottom: 10px;
+	}
+	&__col{
+		box-sizing: border-box;
+		padding-right: 30px;
+		width: 200px;
+	}
+
+	&__nav{
+		display: -webkit-flex;
+		display: flex;
+
+	}
+
+	&__title{
+		color: #404040;
+		font-size: 14px;
+		line-height: 1;
+		padding-bottom: 27px;
+		text-transform: uppercase;
+		&--line{
+			border-bottom: $bd1;
+		}
+	}
+
+	&__list{
+		padding-top: 30px;
+	}
+
+	&__item{
+		margin-bottom: 15px;
+	}
+
+	&__link{
+		color: #7b7b7b;
+		text-transform: uppercase;
+		font-size: 12px;
+		line-height: 1;
+		
+		&:hover{
+			color: $pink;
+		}
+	}
+
+	&__right{
+		width: 270px;
+		box-sizing: border-box;
+		padding-right: 20px;
+	}
+
+	&__box{
+		margin-bottom: 35px;
+	}
+}
+
+.social{
+	padding-right: 7px;
+	&__img-h{
+		display: none;
+	}
+	&:hover{
+		.social__img{
+			display: none;
+		}
+
+		.social__img-h{
+			display: inline;
+		}
+	}
+}
+
+.copyright{
+	
+	text-align: center;
+	font-family: "ProximaNovaLight";
+	font-size: 12px;
+	padding-top: 25px;
+	padding-bottom: 17px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	&__logo{	
+		padding-left: 7px;
+	}
+
+	&__text{
+		display: none;
+	}
+}
+/* ==============================RESPONSIVE============= */
+/* ==================================960========================== */
+@media screen and (max-width: 1170px){
+	.footer{
+		&__col{
+			width: 160px;
+			padding-right: 20px;
+			
+		}
+
+		&__right{
+			width: 220px;
+		}
+	}
+}
+
+/* ==================================744========================== */
+@media screen and (max-width: 959px){
+	.footer{
+		&__body{
+			display: block;
+		}
+
+		&__col{
+			width: 165px;
+			padding-right: 0;
+		}
+
+		&__nav{
+			-webkit-box-pack: justify;
+			-webkit-justify-content: space-between;
+			justify-content: space-between;
+			margin-bottom: 35px;
+		}
+
+		&__right{
+			width: auto;
+			display: -webkit-flex;
+			display: flex;
+		}
+
+		&__box{
+			margin-right: 45px;
+			margin-bottom: 10px;
+		}
+	}
+
+	.copyright{
+		padding: 10px 0;
+		&__logo{
+			display: none
+		}
+
+		&__text{
+			display: inline;
+		}
+	}
+}
+
+/* ==================================320========================== */
+@media screen and (max-width: 743px){
+	.footer{
+		&__nav{
+			display: none;
+		}
+
+		&__right{
+			display: block;
+		}
+	}
+
+	.copyright{
+		display: block;
+		text-align: left;
+		max-width: 460px;
+		box-sizing: border-box;
+		padding: 10px;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,286 @@
+
+.good{
+	width: 270px;
+	display: block;
+	padding-bottom: 30px;
+	&:hover{
+
+		.slick-arrow{
+			display: block !important; 
+		}
+
+		@media screen and (min-width: 1170px){
+			.good{
+				&__discount{
+					display: block;
+				}
+
+				&__price{
+					display: none;
+				}
+
+				&__panel{
+					display: block;
+				}
+
+				&__like{
+					display: block;
+				}
+
+				
+			}
+		}
+		
+	}
+	&__main{
+		position: relative;
+	}
+
+	&__footer{
+		text-align: center;
+		line-height: 1;
+		padding-bottom: 7px;
+	}
+
+	&__name{
+		text-transform: uppercase;
+		font-size: 12px;
+		color: #404040;
+		padding-top: 15px;
+		text-align: center;
+		display: block;
+		padding-bottom: 15px;
+	}
+
+	&__price{
+		text-transform: uppercase;
+		color: #a0a0a0;
+		
+	}
+
+	&__discount{
+		display: none;
+		color: $pink;
+		text-transform: uppercase;
+	}
+
+	&__price-old{
+		span{
+			text-decoration: line-through;	
+		}
+	}
+
+	&__panel{
+		display: none;
+		position: absolute;
+		left: 50%;
+		width: 180px;
+		bottom: 0;
+		transform: translateX(-50%);
+	}
+
+	&__btn{
+		background-color: #71529e;
+		color: #fff;
+		width: 100%;
+		padding: 10px 0;
+		line-height: 1.7;
+		img{
+			display: inline;
+		}
+		&:hover{
+			background-color: #7d5aaf;
+		}
+	}
+
+	&__basket-ic{
+		padding-left: 5px;
+			position: relative;
+			top: 2px;
+	}
+
+	&__status{
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		line-height: 1;
+		color: #404040;
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+
+	&__like{
+		display: none;
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		width: 28px;
+		height: 25px;
+		background-image: url("../img/cart-like.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		&:after{
+			
+		}
+		@media screen and (min-width: 1170px){
+			&:hover{
+				background-image: url("../img/cart-like-active.png");
+				&:after{
+					content: attr(data-tooltip);
+			position: absolute;
+			background-color: #FFF;
+	    border: 1px solid #e5e5e5;
+	    box-sizing: border-box;
+	    padding: 4px 10px;
+	    width: 170px;
+	    text-align: center;
+	    line-height: 1.1;
+			margin-top: -15px;
+			margin-left: 20px;
+	    /* opacity: 0;
+	    -webkit-transition: 0.2s;
+	    transition: 0.2s;
+	    visibility: hidden; */
+	    z-index: 10;
+				}
+			}
+		}
+
+		&--active{
+			background-image: url("../img/cart-like-active.png");
+		}
+	}
+
+	&__size{
+		display: block;
+		text-align: center;
+		position: relative;
+		color: #353535;
+		padding: 13px 0;
+		font-size: 18px;
+		line-height: 1;
+		margin-bottom: 2px;
+		background-color: #FFF;
+		opacity: 0.95;
+		&:hover{
+			opacity: 1;
+		}
+	}
+
+	&__tab{
+		display: none;
+	}
+
+	&__like-active{
+		display: none;
+	}
+
+	&__plus{
+		color: #bdbcbc;
+		font-size: 24px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-45%);
+		right: 15px;
+	}
+
+	&__counter{
+		font-size: 18px;
+		color: #a0a0a0;
+		position: absolute;
+		
+		top: 50%;
+		transform: translateY(-50%);
+		right: -25px;
+		display: none;
+		
+		&--flying{
+			transition:  0.8s ease-in-out ;
+			transform: translateY(-250%);
+			opacity: 0;
+		}
+	}
+
+	.slick{
+		&-arrow{
+			opacity: 0.4;
+			display: none !important;
+		}
+
+		&-disabled{
+			opacity: 0.1;
+		}
+
+		&-prev{
+			left: 5px;
+		}
+
+		&-next{
+			right: 5px;
+		}
+
+		&-slide{
+			//height: 375px;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+			
+		}
+
+	}
+}
+
+/* ==============================RESPONSIVE============= */
+/* ==================================960========================== */
+@media screen and (max-width: 1170px){
+	.good{
+		width: 220px;
+
+		&__panel{
+			width: 150px;
+			display: block;
+		}
+
+		&__like{
+			display: block;
+		}
+
+		.slick-arrow{
+			display: block !important;
+			width: 40px;
+			height: 44px;
+			background-position: 65% 50%;
+		}
+
+		.slick-next{
+			right: 0px;
+		}
+
+		.slick-prev{
+			left: 0px;
+		}
+	}
+}
+
+/* ==================================744========================== */
+@media screen and (max-width: 959px){
+	.good{
+		width: 230px;
+
+		&__panel{
+			width: 150px;
+		}
+	}
+}
+
+/* ==================================320========================== */
+@media screen and (max-width: 743px){
+	.good{
+		width: 100%;
+		margin: 0 auto;
+		&__panel{
+			width: 180px;
+		}
+	}
+}
